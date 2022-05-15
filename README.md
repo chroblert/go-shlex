@@ -9,8 +9,8 @@ Go.
 ## description
 ```
 Split(<目标字符串>,<是否posix模式>,<是否保留所有字面量>,[指定分隔符])
-当未指定分隔符，且不保留所有字面量时,即Split(<目标字符串>,<是否posix模式>,false)，与原来的函数作用相同(desertbit/go-shlex)
-
+    当未指定分隔符，且不保留所有字面量时,即Split(<目标字符串>,<是否posix模式>,false)，与原来的函数作用相同(desertbit/go-shlex)
+OriginSplit(<目标字符串>,<是否posix模式>)
 ```
 ```
 是否保留所有字面量：指是否保留',",\这些特殊字符。

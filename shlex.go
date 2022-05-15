@@ -103,6 +103,12 @@ func Split(s string, posix bool, preserveLiteral bool, delimiter ...rune) ([]str
 	return NewLexerString(posix, true, delimiter[0], s, preserveLiteral, true).Split()
 }
 
+// Split splits a string according to posix or non-posix rules.
+// 未修改的Split()
+func OriginSplit(s string, posix bool) ([]string, error) {
+	return NewLexerString(posix, true, ' ', s, false, false).Split()
+}
+
 // SetTokenizer sets a Tokenizer.
 func (l *Lexer) SetTokenizer(t Tokenizer) {
 	l.tokenizer = t
