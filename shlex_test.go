@@ -262,7 +262,7 @@ func testSplit(t *testing.T, posix bool) {
 	for _, d := range data {
 		t.Logf("Spliting: `%s'", d.in)
 
-		result, err := NewLexerString(d.in, posix, false).Split()
+		result, err := NewLexerString(posix, false, ' ', d.in, false, false).Split()
 
 		// check closing and escaped error
 		if err != d.err {

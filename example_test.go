@@ -4,19 +4,19 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/anmitsu/go-shlex"
+	shlex "github.com/chroblert/go-shlex"
 )
 
 func ExampleSplit() {
 	cmd := `cp -Rdp "file name" 'file name2' dir\ name`
 
 	// Split of cmd with POSIX mode.
-	words1, err := shlex.Split(cmd, true)
+	words1, err := shlex.Split(cmd, true, false)
 	if err != nil {
 		log.Fatal(err)
 	}
 	// Split of cmd with Non-POSIX mode.
-	words2, err := shlex.Split(cmd, false)
+	words2, err := shlex.Split(cmd, false, false)
 	if err != nil {
 		log.Fatal(err)
 	}

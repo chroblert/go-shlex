@@ -1,3 +1,3 @@
-module github.com/anmitsu/go-shlex
+module github.com/chroblert/go-shlex
 
-go 1.13
+go 1.16
